@@ -1,0 +1,204 @@
+﻿{
+  "Routes": [
+    //Routes for user service**************************************
+    {
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44340
+        }
+      ],
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+      "SwaggerKey": "User"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44340
+        }
+      ],
+      "UpstreamPathTemplate": "/api/User/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+      "SwaggerKey": "User"
+    },
+    //Routes for user service END **************************************
+
+    //Routes for user Service Request**************************************
+    {
+      "DownstreamPathTemplate": "/api/Service",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44337
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Service",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "Service"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Service/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44337
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Service/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "SwaggerKey": "Service"
+    },
+    //Routes for user Service Request END**************************************
+
+    //Routes for Mechanic service**************************************
+    {
+      "DownstreamPathTemplate": "/api/Mechanic/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44359
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Mechanic/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "SwaggerKey": "Mechanic"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Mechanic",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44359
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Mechanic",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+      "SwaggerKey": "Mechanic"
+    },
+    //Routes for Mechanic Service End**************************************
+    //Routes for Vehicle Service Start*************************************
+    {
+      "DownstreamPathTemplate": "/api/Vehicle/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44310
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Vehicle/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "SwaggerKey": "Vehicle"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Vehicle",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44310
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Vehicle",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE" ],
+      "SwaggerKey": "Vehicle"
+    },
+    //Routes for Vehicle Service END*************************************
+    //Routes for Purchase Start *****************************************
+    {
+      "DownstreamPathTemplate": "/api/Purchase/{everything}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44394
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Purchase/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "SwaggerKey": "Purchase"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Purchase",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44394
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Purchase",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "SwaggerKey": "Purchase"
+    }
+    //Routes for Purchase END *****************************************
+  ],
+
+  //Swagger end points for Gateway*****************************************
+  "SwaggerEndPoints": [
+    {
+      "Key": "User",
+      "Config": [
+        {
+          "Name": "User v1",
+          "version": "v1",
+          "Url": "https://localhost:44340/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Service",
+      "Config": [
+        {
+          "Name": "Service v1",
+          "version": "v1",
+          "Url": "https://localhost:44337/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Mechanic",
+      "Config": [
+        {
+          "Name": "Mechanic v1",
+          "version": "v1",
+          "Url": "https://localhost:44359/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Vehicle",
+      "Config": [
+        {
+          "Name": "Vehicle v1",
+          "version": "v1",
+          "Url": "https://localhost:44310/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Purchase",
+      "Config": [
+        {
+          "Name": "Purchase v1",
+          "version": "v1",
+          "Url": "https://localhost:44394/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  //Swagger end points for Gateway END*****************************************
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44323"
+  }
+}
